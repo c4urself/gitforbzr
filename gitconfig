@@ -1,0 +1,48 @@
+[user]
+    name = Christian Verkerk
+    email = christianverkerk@gmail.com
+[alias]
+    # Bazaar
+    whoami = !echo "`git config user.name` \\<`git config user.email`\\>"
+    ignored = !cat `git rev-parse --show-toplevel`/.gitignore
+    update = !git remote update && 
+    nick = !git rev-parse --abbrev-ref HEAD
+    ls = !git ls-files --full-name
+    branches = !git branch -a
+    shelve = stash
+    unshelve = stash pop
+    revno = !git rev-parse --verify HEAD
+    revert = checkout
+    annotate = blame
+    pack = gc --auto
+    tags = tag -l
+    deleted = !git ls-files --deleted
+    # Additional
+    st = status
+    unstage = reset HEAD --
+    sync = !git remote update
+    update = !git remote update
+    changes=diff --name-status -r
+[github]
+    name = c4urself
+[format]
+    pretty = format:%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[core]
+    editor = /usr/bin/vim
