@@ -23,8 +23,6 @@
     sync = !git remote update
     update = !git remote update
     changes=diff --name-status -r
-[github]
-    name = c4urself
 [format]
     pretty = format:%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset
 [color]
